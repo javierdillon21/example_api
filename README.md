@@ -31,6 +31,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+//Server=localhost\MSSQLSERVER01;Database=master;Trusted_Connection=True;
+
+Al instalar SQL SERVER DEVELOPER EDITION tenemos los datos de la instancia.
+USAMOS WINDOWS AUTENTICATION al inicio. 
+Creamos un nuevo usuario para la conexion con la API, y asignar los permisos para acceder a las tablas y la base de datos. 
+Le dimos permisos sysadmin al usuario. 
+
+EN SQL SERVER CONFIGURATION, habilitamos TCP/IP para la instancia correspondiente. Reiniciamos el servicio. En propiedades 
+podemos ver el puerto donde está corriendo. Ese puerto lo usamos en el lib que estemos usando (tedious) en la api.
+
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
